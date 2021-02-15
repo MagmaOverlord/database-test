@@ -4,7 +4,7 @@ import pymysql
 
 app = Flask(__name__)
 
-test_db = pymysql.connect(
+test_db = mysql.connector.connect(
     host="sql3.freesqldatabase.com",
     user="sql3393154",
     password="p3tsfT6ePr",
