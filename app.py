@@ -22,7 +22,7 @@ val = [
 
 cursor.executemany(sql, val)
 
-mydb.commit()
+test_db.commit()
 
 @app.route('/')
 def hello_world():
