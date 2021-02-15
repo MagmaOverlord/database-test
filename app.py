@@ -26,7 +26,7 @@ mydb.commit()
 
 @app.route('/')
 def hello_world():
-    sql = "SELECT name FROM test"
+    sql = "SELECT firstname FROM people"
     cursor.execute(sql)
     result = cursor.fetchall()
     return render_template('index.html', list=result)
