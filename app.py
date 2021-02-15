@@ -14,7 +14,7 @@ test_db = mysql.connector.connect(
 cursor = test_db.cursor()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS people (id INT AUTO_INCREMENT PRIMARY KEY, firstname VARCHAR(150), lastname VARCHAR(150))")
-sql = "INSERT INTO customers (firstname, lastname) VALUES (%s, %s)"
+sql = "INSERT INTO people (firstname, lastname) VALUES (%s, %s)"
 val = [
     ("Tomas", "Brejl"),
     ("Lucie", "Brejlova")
