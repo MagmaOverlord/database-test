@@ -13,7 +13,7 @@ test_db = mysql.connector.connect(
 
 cursor = test_db.cursor()
 
-cursor.execute("CREATE TABLE people IF NOT EXISTS (id INT AUTO_INCREMENT PRIMARY KEY, firstname VARCHAR(150), lastname VARCHAR(150))")
+cursor.execute("CREATE TABLE IF NOT EXISTS people (id INT AUTO_INCREMENT PRIMARY KEY, firstname VARCHAR(150), lastname VARCHAR(150))")
 sql = "INSTERT INTO customers (firstname, lastname) VALUES (%s, %s)"
 val = [
     ("Tomas", "Brejl")
